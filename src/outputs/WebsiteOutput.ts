@@ -20,7 +20,7 @@ export class WebsiteOutput extends AbstractDirectoryOutput<config> {
         }, {} as Record<string, T>);
     }
     protected async postProcess(mode: model): Promise<void> {
-        await this.run(`npx tailwindcss -c ${__dirname}/../../resources/templates/default/tailwind.config.js -i ${__dirname}/../../assets/templates/default/styles.css.tailwind -o ./styles.css`)
+        await this.run(`npx tailwindcss -c ${__dirname}/../../resources/templates/default/tailwind.config.js -i ${__dirname}/../../resources/templates/default/styles.css.tailwind -o ./styles.css`)
     }
 }
 
