@@ -86,7 +86,7 @@ export abstract class AbstractDirectoryOutput<C extends config = config> extends
         });
     }
     protected renderEjs(template: string, props: any = {}) {
-        return ejs.render(fs.readFileSync(`${__dirname}/../assets/templates/default/${template}.ejs`, 'utf-8'), props);
+        return ejs.render(fs.readFileSync(`${__dirname}/../resources/templates/default/${template}.ejs`, 'utf-8'), props);
     }
     protected run(cmd: string) {
         return new Promise((resolve, reject) => {
